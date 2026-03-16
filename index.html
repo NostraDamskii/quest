@@ -16,14 +16,7 @@
         <a href="base.html"><h1 class="jersey-10-regular">SupaaaQueest</h1></a>
     </div>
 
-    <button id="toggle-music">⏸ Пауза</button>
-    <script>
-    document.addEventListener('click', function() {
-      const music = document.getElementById('background-music');
-      music.play().catch(error => {
-        console.log("Автовоспроизведение заблокировано. Музыка начнётся после клика.");
-      });
-    }, { once: true });
-  </script>
+    <button id="toggle-music">▶ Play</button>
+    <script src="script.js"></script>
 </body>
 </html>

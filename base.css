@@ -30,3 +30,23 @@ body {
 .choice-button:hover {
   background-color: #ff1493;
 }
+#toggle-music{
+  border:none;
+  background: none;
+  font-size: 20px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 100;
+  border-radius: 30px;
+  background: linear-gradient(#d89fee,#c342d4);
+  padding:10px;
+  position:fixed;
+  bottom: 50px;
+  left:50px;
+  color:#fff;
+  text-shadow: #663f5e 0 0 5px;
+  transition: 0.5s;
+
+}
+#toggle-music:hover{
+  background-color: #ff1493;
+}
