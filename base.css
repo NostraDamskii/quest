@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #c342d4;
   color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,7 +11,7 @@ body {
 .game-container {
   width: 80%;
   max-width: 600px;
-  background-color: #111;
+  background-color:#d89fee ;
   padding: 20px;
   border-radius: 10px;
 }
@@ -20,7 +20,7 @@ body {
   display: block;
   margin: 10px 0;
   padding: 10px;
-  background-color: #333;
+  background-color: #663f5e;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -28,5 +28,5 @@ body {
 }
 
 .choice-button:hover {
-  background-color: #555;
+  background-color: #ff1493;
 }
