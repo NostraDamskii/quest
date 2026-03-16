@@ -52,6 +52,7 @@ body{
   padding:10px;
   position:fixed;
   bottom: 50px;
+  width: 100px;
   left:50px;
   color:#fff;
   text-shadow: #663f5e 0 0 5px;
