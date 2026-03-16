@@ -7,8 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="background-music" loop autoplay>
+        <source src="music/Aura-Long-Version-chosic.com_.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
     <div class="header">
         <a href="base.html"><h1 class="jersey-10-regular">SupaaaQueest</h1></a>
     </div>
+
+    <script>
+    document.addEventListener('click', function() {
+      const music = document.getElementById('background-music');
+      music.play().catch(error => {
+        console.log("Автовоспроизведение заблокировано. Музыка начнётся после клика.");
+      });
+    }, { once: true });
+  </script>
 </body>
 </html>
