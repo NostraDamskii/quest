@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient( #d89fee,#c342d4);
+    height:100vh;
+}
+.header{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+
+    animation: glitch 1s infinite alternate;
+    
+}
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    text-shadow: #c342d4 0 0 10px;
+    transition:0.5s;
+}
+.header a:hover{
+    animation: glitch 0.3s infinite alternate;
+    color: #663f5e; /* Ярко-розовый (HotPink) */
+    text-shadow: 0 0 8px #663f5e;
+
+}
+.header a:active{
+    animation: glitch 0.1s infinite alternate;
+    transform: translate(-50%, -50%) scale(0.98);
+    color: #ff1493; /* Малиновый (DeepPink) */
+    text-shadow: 0 0 12px #ff1493;
+}
+
+
+
+@keyframes glitch {
+   0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-50%, -50%) translate(-3px, 3px);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translate(-50%, -50%) translate(-3px, -3px);
+    opacity: 0.8;
+  }
+  60% {
+    transform: translate(-50%, -50%) translate(3px, 3px);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-50%, -50%) translate(3px, -3px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0);
+    opacity: 1;
+  }
+}
