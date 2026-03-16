@@ -20,3 +20,14 @@ function loadScene(scenePath) {
 window.onload = function() {
   loadScene("scenes/scene1.html");
 };
+document.getElementById('background-music').volume = 0.3;
+document.getElementById('toggle-music').addEventListener('click', function() {
+  const music = document.getElementById('background-music');
+  if (music.paused) {
+    music.play();
+    this.textContent = '⏸ Пауза';
+  } else {
+    music.pause();
+    this.textContent = '▶ Играть';
+  }
+});

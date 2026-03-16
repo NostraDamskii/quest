@@ -5,10 +5,30 @@
   <link rel="stylesheet" href="base.css">
 </head>
 <body>
+  <audio id="background-music" loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="game-container">
     <div id="scene-content"></div> <!-- Сюда подгружаем сцены -->
   </div>
-
+  <button id="toggle-music">⏸ Пауза</button>
   <script src="script.js"></script>
+  <script>
+    // Продолжаем музыку, если она уже играла на предыдущей странице
+    window.onload = function() {
+      const music = document.getElementById('background-music');
+      music.currentTime = localStorage.getItem('musicTime') || 0;
+      music.play().catch(error => {
+        console.log("Музыка не воспроизводится автоматически.");
+      });
+
+      // Сохраняем время воспроизведения при переходе на другую страницу
+      window.addEventListener('beforeunload', function() {
+        localStorage.setItem('musicTime', music.currentTime);
+      });
+    };
+  </script>
+
 </body>
 </html>
