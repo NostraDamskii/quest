@@ -4,9 +4,6 @@
 body {
   background: radial-gradient( #1A1A2E,#0A0A0A);
   color: #fff;
-  font-family: "Tiny5", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   margin: 0;
   padding: 20px;
@@ -22,6 +19,12 @@ body {
   padding: 20px;
   border-radius: 10px;
   z-index: 10;
+}
+.game-container h2{
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: subtle-glitch 3s infinite alternate ease-in-out;
 }
 .game-container p{
   font-family: "Play", sans-serif;
@@ -88,6 +91,27 @@ body {
   100% {
     transform: translateY(0) translateX(0); /* Возврат в начало */
     opacity: 0; /* Пиксель "исчезает" в конце, чтобы возвращение было незаметным */
+  }
+}
+/* Анимация едва заметного глитча */
+@keyframes subtle-glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 @media (max-width:768px){
