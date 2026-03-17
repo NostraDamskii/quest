@@ -12,6 +12,7 @@ body {
 
 .game-container {
   width: 80%;
+  font-size: 20px;
   max-width: 600px;
   background-color:#3D3D3D ;
   padding: 20px;
@@ -50,6 +51,7 @@ body {
   left:50px;
   color:#fff;
   text-shadow: #8A2BE2 0 0 5px;
+  z-index: 30;
   transition: 0.5s;
 
 }
@@ -80,5 +82,10 @@ body {
   100% {
     transform: translateY(0) translateX(0); /* Возврат в начало */
     opacity: 0; /* Пиксель "исчезает" в конце, чтобы возвращение было незаметным */
+  }
+}
+@media (max-width:768px){
+  .game-container{
+    font-size: 35px;
   }
 }
