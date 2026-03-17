@@ -41,6 +41,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  for (let i = 0; i < 100; i++) {
+  const pixel = document.createElement('div');
+  pixel.className = 'pixel-rain';
+
+  // Случайная горизонтальная позиция
+  pixel.style.left = `${Math.random() * 100}%`;
+
+  // Случайная задержка анимации
+  pixel.style.animationDelay = `${Math.random() * 2}s`;
+
+  // Случайная длительность анимации (от 1 до 3 секунд)
+  pixel.style.animationDuration = `${1 + Math.random() * 2}s`;
+
+  document.body.appendChild(pixel);
+}
   // Сохраняем время воспроизведения при переходе на другую страницу
   window.addEventListener('beforeunload', function() {
     localStorage.setItem('musicTime', music.currentTime);

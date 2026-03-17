@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 body {
-  background: radial-gradient( #d89fee,#c342d4);
+  background: radial-gradient( #1A1A2E,#0A0A0A);
   color: #fff;
   font-family: "Jersey 10", sans-serif;
   margin: 0;
   padding: 20px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .game-container {
   width: 80%;
   max-width: 600px;
-  background-color:#d89fee ;
+  background-color:#3D3D3D ;
   padding: 20px;
   border-radius: 10px;
+  z-index: 10;
 }
 
 .choice-button {
   display: block;
   margin: 10px 0;
   padding: 10px;
-  background-color: #663f5e;
+  background-color: #1A1A2E;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 20;
+  
 }
 
 .choice-button:hover {
-  background-color: #ff1493;
+  background-color: #8A2BE2;
 }
 #toggle-music{
   border:none;
@@ -38,17 +42,43 @@ body {
   font-family: "Jersey 10", sans-serif;
   font-weight: 100;
   border-radius: 30px;
-  background: linear-gradient(#d89fee,#c342d4);
+  background: linear-gradient(#1A1A2E,#0A0A0A);
   padding:10px;
   position:fixed;
   bottom: 50px;
-  left:50px;
   width: 100px;
+  left:50px;
   color:#fff;
-  text-shadow: #663f5e 0 0 5px;
+  text-shadow: #8A2BE2 0 0 5px;
   transition: 0.5s;
 
 }
 #toggle-music:hover{
-  background-color: #ff1493;
+  background: linear-gradient(#8A2BE2,#1A1A2E);
+  transform: scale(1.1);
+}
+.pixel-rain {
+  position: absolute;
+  width: 2px;
+  height: 6px;
+  background-color: rgb(170, 197, 197); /* Цвет пикселя (например, неоново-голубой) */
+  top: -10px;
+  left: 50%; /* Начальная позиция по горизонтали (можно рандомизировать в JS) */
+  animation: pixelFall 2s linear infinite; /* Длительность анимации: 2 секунды */
+}
+
+/* Анимация падения пикселя */
+@keyframes pixelFall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(100vh) translateX(10px); /* Падение вниз + небольшое смещение по X */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(0); /* Возврат в начало */
+    opacity: 0; /* Пиксель "исчезает" в конце, чтобы возвращение было незаметным */
+  }
 }
