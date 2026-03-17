@@ -29,6 +29,11 @@ body {
 .game-container p{
   font-family: "Play", sans-serif;
 }
+.game-container img{
+  margin:5px auto;
+  border-radius: 30px;
+  opacity: 0.9;
+}
 .choice-button {
   display: block;
   margin: 10px 0;
