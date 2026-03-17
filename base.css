@@ -125,5 +125,8 @@ body {
   body{
     font-size: 30px;
   }
+  .game-container{
+    overflow:scroll;
+  }
   
 }
