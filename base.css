@@ -63,6 +63,7 @@ body {
   border-radius: 30px;
   background: linear-gradient(#1A1A2E,#0A0A0A);
   padding:10px;
+  display: inline-block;
   position:fixed;
   bottom: 50px;
   width: 100px;
@@ -135,6 +136,7 @@ body {
     top:10px;
     left:50%;
     transform:translateX(-50%);
+    height: 50px;
   }
   
 }
