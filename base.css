@@ -19,6 +19,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   z-index: 10;
+
 }
 .game-container h2{
   font-family: "Tiny5", sans-serif;
@@ -35,6 +36,7 @@ body {
   opacity: 0.9;
   width: 70%;
   margin:5px auto;
+  border:2px inset #fff;
 }
 .choice-button {
   display: block;
@@ -127,6 +129,12 @@ body {
   }
   .game-container{
     overflow:scroll;
+    margin-top:70px;
+  }
+  #toggle-music{
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
   }
   
 }
